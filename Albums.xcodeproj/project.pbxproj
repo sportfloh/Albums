@@ -95,8 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DF87D3942774E817009D7393 /* AlbumsApp.swift */,
-				DF87D3962774E817009D7393 /* ContentView.swift */,
-				DF87D3982774E818009D7393 /* Assets.xcassets */,
+				DF87D3BF2774E8E0009D7393 /* UI */,
 				DF87D39A2774E818009D7393 /* Preview Content */,
 			);
 			path = Albums;
@@ -127,6 +126,15 @@
 			path = AlbumsUITests;
 			sourceTree = "<group>";
 		};
+		DF87D3BF2774E8E0009D7393 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DF87D3982774E818009D7393 /* Assets.xcassets */,
+				DF87D3962774E817009D7393 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF87D3B52774E818009D7393 /* Build configuration list for PBXNativeTarget "Albums" */;
 			buildPhases = (
+				DF87D3BE2774E8BD009D7393 /* SwiftLint */,
 				DF87D38D2774E817009D7393 /* Sources */,
 				DF87D38E2774E817009D7393 /* Frameworks */,
 				DF87D38F2774E817009D7393 /* Resources */,
@@ -251,6 +260,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF87D3BE2774E8BD009D7393 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect && swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF87D38D2774E817009D7393 /* Sources */ = {

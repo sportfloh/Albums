@@ -27,3 +27,18 @@ extension NetworkDataHandlerTestCase {
         }
     }
 }
+
+extension NetworkJSONHandlerTestCase {
+    func testDataHandlerError() {
+        let response = HTTPURLResponseTestDouble(headerFields: ["CONTENT-TYPE": "TEXT/JAVASCRIPT"])
+
+        XCTAssertThrowsError(
+            try NetworkJSONHandler.json(with: DataTestDouble(), response: response)
+        ) { error in
+            if let error = try? XCTUnwrap(error as? NetworkJSONHandler.Error) {
+                XCTAssertEqual(error.code, .dataHandlerError)
+                XCTAssertNil(error.underlying)
+            }
+        }
+    }
+}

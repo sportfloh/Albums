@@ -5,12 +5,32 @@
 //  Created by Florian Bruder on 23.12.21.
 //
 
+// swiftlint:disable nesting
+
 import Foundation
 
-struct NetworkDataHandler {}
+struct NetworkDataHandler {
+    struct Error: Swift.Error {
+        enum Code {
+            case statusCodeError
+        }
 
-extension NetworkDataHandler {
-    static func data(with data: Data, response: URLResponse) throws {
-        throw NSError(domain: "", code: 0)
+        let code: Self.Code
+        let underlying: Swift.Error?
+
+        init(_ code: Self.Code, underlying: Swift.Error? = nil) {
+            self.code = code
+            self.underlying = underlying
+        }
+    }
+
+    static func data(with data: Data, response: URLResponse) throws -> Data {
+        guard
+            let statusCode = (response as? HTTPURLResponse)?.statusCode,
+            200 ... 299 ~= statusCode
+        else {
+            throw Self.Error(.statusCodeError)
+        }
+        return data
     }
 }

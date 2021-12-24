@@ -14,6 +14,8 @@
 		DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3A52774E818009D7393 /* AlbumsTests.swift */; };
 		DF87D3B02774E818009D7393 /* AlbumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3AF2774E818009D7393 /* AlbumsUITests.swift */; };
 		DF87D3B22774E818009D7393 /* AlbumsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3B12774E818009D7393 /* AlbumsUITestsLaunchTests.swift */; };
+		DF87D3C12774E9EF009D7393 /* NetworkDataHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C02774E9EF009D7393 /* NetworkDataHandlerTests.swift */; };
+		DF87D3C32774EA91009D7393 /* NetworkDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		DF87D3AB2774E818009D7393 /* AlbumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbumsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF87D3AF2774E818009D7393 /* AlbumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsUITests.swift; sourceTree = "<group>"; };
 		DF87D3B12774E818009D7393 /* AlbumsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF87D3C02774E9EF009D7393 /* NetworkDataHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataHandlerTests.swift; sourceTree = "<group>"; };
+		DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				DF87D3942774E817009D7393 /* AlbumsApp.swift */,
 				DF87D3BF2774E8E0009D7393 /* UI */,
 				DF87D39A2774E818009D7393 /* Preview Content */,
+				DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DF87D3A52774E818009D7393 /* AlbumsTests.swift */,
+				DF87D3C02774E9EF009D7393 /* NetworkDataHandlerTests.swift */,
 			);
 			path = AlbumsTests;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 			files = (
 				DF87D3972774E817009D7393 /* ContentView.swift in Sources */,
 				DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */,
+				DF87D3C32774EA91009D7393 /* NetworkDataHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */,
+				DF87D3C12774E9EF009D7393 /* NetworkDataHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

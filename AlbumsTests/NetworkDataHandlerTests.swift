@@ -27,9 +27,7 @@ extension NetworkDataHandlerTestCase {
 }
 
 extension NetworkDataHandlerTestCase {
-    private static var errorCodes: [Int] {
-        Array(100 ... 199) + Array(300 ... 599)
-    }
+    private static var errorCodes = [Int](100 ... 199) + [Int](300 ... 599)
 
     func testErrorWithStatusCode() {
         for statusCode in Self.errorCodes {
@@ -57,9 +55,7 @@ extension NetworkDataHandlerTestCase {
 }
 
 extension NetworkDataHandlerTestCase {
-    private static var successCodes: [Int] {
-        Array(200 ... 299)
-    }
+    private static var successCodes = [Int](200 ... 299)
 
     func testSuccess() {
         for statusCode in Self.successCodes {

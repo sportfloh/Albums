@@ -9,7 +9,9 @@
 
 import Foundation
 
-struct NetworkDataHandler {
+struct NetworkDataHandler {}
+
+extension NetworkDataHandler {
     struct Error: Swift.Error {
         enum Code {
             case statusCodeError
@@ -23,7 +25,9 @@ struct NetworkDataHandler {
             self.underlying = underlying
         }
     }
+}
 
+extension NetworkDataHandler {
     static func data(with data: Data, response: URLResponse) throws -> Data {
         guard
             let statusCode = (response as? HTTPURLResponse)?.statusCode,

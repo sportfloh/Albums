@@ -18,6 +18,9 @@
 		DF87D3C32774EA91009D7393 /* NetworkDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */; };
 		DF87D3C52775FF95009D7393 /* NetworkJSONHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C42775FF95009D7393 /* NetworkJSONHandlerTests.swift */; };
 		DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C62775FFCD009D7393 /* NetworkJSONHandler.swift */; };
+		DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */; };
+		DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
+		DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,10 @@
 		DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataHandler.swift; sourceTree = "<group>"; };
 		DF87D3C42775FF95009D7393 /* NetworkJSONHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONHandlerTests.swift; sourceTree = "<group>"; };
 		DF87D3C62775FFCD009D7393 /* NetworkJSONHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONHandler.swift; sourceTree = "<group>"; };
+		DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkImageSourceTests.m; sourceTree = "<group>"; };
+		DFDE2429277A21E300723867 /* Albums-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Albums-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFDE242A277A21E400723867 /* NetworkImageSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkImageSource.h; sourceTree = "<group>"; };
+		DFDE242B277A21E400723867 /* NetworkImageSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkImageSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +112,9 @@
 				DF87D3942774E817009D7393 /* AlbumsApp.swift */,
 				DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */,
 				DF87D3C62775FFCD009D7393 /* NetworkJSONHandler.swift */,
+				DFDE2429277A21E300723867 /* Albums-Bridging-Header.h */,
+				DFDE242A277A21E400723867 /* NetworkImageSource.h */,
+				DFDE242B277A21E400723867 /* NetworkImageSource.m */,
 				DF87D3BF2774E8E0009D7393 /* UI */,
 				DF87D39A2774E818009D7393 /* Preview Content */,
 			);
@@ -125,6 +135,7 @@
 				DF87D3A52774E818009D7393 /* AlbumsTests.swift */,
 				DF87D3C02774E9EF009D7393 /* NetworkDataHandlerTests.swift */,
 				DF87D3C42775FF95009D7393 /* NetworkJSONHandlerTests.swift */,
+				DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */,
 			);
 			path = AlbumsTests;
 			sourceTree = "<group>";
@@ -216,9 +227,11 @@
 				TargetAttributes = {
 					DF87D3902774E817009D7393 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					DF87D3A02774E818009D7393 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = DF87D3902774E817009D7393;
 					};
 					DF87D3AA2774E818009D7393 = {
@@ -301,6 +314,7 @@
 			files = (
 				DF87D3972774E817009D7393 /* ContentView.swift in Sources */,
 				DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */,
+				DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */,
 				DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */,
 				DF87D3C32774EA91009D7393 /* NetworkDataHandler.swift in Sources */,
 			);
@@ -311,6 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */,
+				DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */,
+				DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */,
 				DF87D3C12774E9EF009D7393 /* NetworkDataHandlerTests.swift in Sources */,
 				DF87D3C52775FF95009D7393 /* NetworkJSONHandlerTests.swift in Sources */,
 			);
@@ -462,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Albums/Preview Content\"";
@@ -481,6 +498,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.sportfloh.Albums;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Albums/Albums-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Albums/Preview Content\"";
@@ -510,6 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.sportfloh.Albums;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Albums/Albums-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -520,15 +541,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3H9LYTUKJE;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.sportfloh.AlbumsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Albums.app/Albums";
@@ -540,11 +568,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3H9LYTUKJE;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.sportfloh.AlbumsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

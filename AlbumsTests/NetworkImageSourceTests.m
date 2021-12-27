@@ -24,3 +24,11 @@
 }
 
 @end
+
+@implementation NetworkImageSourceTestCase (CreateImage)
+
+- (void)testCreateImage {
+    XCTAssert([NetworkImageSource createImage] == CGImageSourceCreateImageAtIndex,);
+}
+
+@end

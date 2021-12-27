@@ -8,8 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <ImageIO/ImageIO.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface NetworkImageSource: NSObject
 
 @end
@@ -17,13 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NetworkImageSource (CreateImageSource)
 
 + (CGImageSourceRef _Nullable (*_Nonnull)(CFDataRef _Nonnull, CFDictionaryRef _Nullable))createImageSource;
++ (CGImageSourceRef _Nullable)createImageSourceWithData:(CFDataRef _Nonnull)data options:(CFDictionaryRef _Nullable)options CF_RETURNS_RETAINED;
 
 @end
 
 @interface NetworkImageSource (CreateImage)
 
 + (CGImageRef _Nullable (*_Nonnull)(CGImageSourceRef _Nonnull, size_t, CFDictionaryRef _Nullable))createImage;
++ (CGImageRef _Nullable)createImageWithImageSource:(CGImageSourceRef _Nonnull)imageSource atIndex:(size_t)index options:(CFDictionaryRef _Nullable)options CF_RETURNS_RETAINED;
 
 @end
 
-NS_ASSUME_NONNULL_END

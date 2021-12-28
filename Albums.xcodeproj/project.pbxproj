@@ -21,6 +21,8 @@
 		DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */; };
 		DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
 		DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
+		DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
+		DFDE2430277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		DFDE2429277A21E300723867 /* Albums-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Albums-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFDE242A277A21E400723867 /* NetworkImageSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkImageSource.h; sourceTree = "<group>"; };
 		DFDE242B277A21E400723867 /* NetworkImageSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkImageSource.m; sourceTree = "<group>"; };
+		DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageSerialization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 				DFDE2429277A21E300723867 /* Albums-Bridging-Header.h */,
 				DFDE242A277A21E400723867 /* NetworkImageSource.h */,
 				DFDE242B277A21E400723867 /* NetworkImageSource.m */,
+				DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */,
 				DF87D3BF2774E8E0009D7393 /* UI */,
 				DF87D39A2774E818009D7393 /* Preview Content */,
 			);
@@ -315,6 +319,7 @@
 				DF87D3972774E817009D7393 /* ContentView.swift in Sources */,
 				DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */,
 				DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */,
+				DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */,
 				DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */,
 				DF87D3C32774EA91009D7393 /* NetworkDataHandler.swift in Sources */,
 			);
@@ -327,6 +332,7 @@
 				DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */,
 				DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */,
 				DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */,
+				DFDE2430277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */,
 				DF87D3C12774E9EF009D7393 /* NetworkDataHandlerTests.swift in Sources */,
 				DF87D3C52775FF95009D7393 /* NetworkJSONHandlerTests.swift in Sources */,
 			);

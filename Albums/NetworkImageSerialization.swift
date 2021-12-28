@@ -9,6 +9,8 @@
 
 import Foundation
 
+// MARK: -
+
 protocol NetworkImageSerializationImageSource {
     associatedtype ImageSource
     associatedtype Image
@@ -18,6 +20,8 @@ protocol NetworkImageSerializationImageSource {
 }
 
 extension NetworkImageSource: NetworkImageSerializationImageSource {}
+
+// MARK: -
 
 struct NetworkImageSerialization<ImageSource: NetworkImageSerializationImageSource> {}
 
@@ -46,8 +50,9 @@ extension NetworkImageSerialization {
         else {
             throw Self.Error(.imageSourceError)
         }
-        let image = ImageSource.createImage(
-            with: imageSource, at: 0, options: nil)
-        throw Self.Error(.imageError)
+        guard let image = ImageSource.createImage(with: imageSource, at: 0, options: nil) else {
+            throw Self.Error(.imageError)
+        }
+        return image
     }
 }

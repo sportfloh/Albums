@@ -8,9 +8,9 @@
 @testable import Albums
 import XCTest
 
-final class NetworkImageSerializationTestCase: XCTestCase {
-    private typealias NetworkImageSerializationTestDouble = NetworkImageSerialization<ImageSourceTestDouble>
+// MARK: -
 
+final class NetworkImageSerializationTestCase: XCTestCase {
     override func tearDown() {
         ImageSourceTestDouble.imageSourceParameterData = nil
         ImageSourceTestDouble.imageSourceParameterOptions = nil
@@ -23,7 +23,11 @@ final class NetworkImageSerializationTestCase: XCTestCase {
     }
 }
 
+// MARK: - Test Doubles
+
 extension NetworkImageSerializationTestCase {
+    private typealias NetworkImageSerializationTestDouble = NetworkImageSerialization<ImageSourceTestDouble>
+
     private struct ImageSourceTestDouble: NetworkImageSerializationImageSource {
         static var imageSourceParameterData: CFData?
         static var imageSourceParameterOptions: CFDictionary?
@@ -56,6 +60,8 @@ extension NetworkImageSerializationTestCase {
     }
 }
 
+// MARK: -
+
 extension NetworkImageSerializationTestCase {
     func testImageSourceError() {
         ImageSourceTestDouble.imageSourceReturnImageSource = nil
@@ -82,6 +88,8 @@ extension NetworkImageSerializationTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkImageSerializationTestCase {
     func testImageError() {
@@ -112,5 +120,36 @@ extension NetworkImageSerializationTestCase {
                 XCTAssertNil(error.underlying)
             }
         }
+    }
+}
+
+// MARK: -
+
+extension NetworkImageSerializationTestCase {
+    func testSuccess() {
+        ImageSourceTestDouble.imageSourceReturnImageSource = NSObject()
+
+        ImageSourceTestDouble.imageReturnImage = NSObject()
+
+        XCTAssertNoThrow(
+            try {
+                let image = try NetworkImageSerializationTestDouble.image(with: DataTestDouble())
+
+                XCTAssertEqual(
+                    ImageSourceTestDouble.imageSourceParameterData as Data?,
+                    DataTestDouble()
+                )
+                XCTAssertNoThrow(ImageSourceTestDouble.imageSourceParameterOptions)
+
+                XCTAssertIdentical(
+                    ImageSourceTestDouble.imageParameterImageSource,
+                    ImageSourceTestDouble.imageSourceReturnImageSource
+                )
+                XCTAssertEqual(ImageSourceTestDouble.imageParameterIndex, 0)
+                XCTAssertNil(ImageSourceTestDouble.imageSourceParameterOptions)
+
+                XCTAssertIdentical(image, ImageSourceTestDouble.imageReturnImage)
+            }()
+        )
     }
 }

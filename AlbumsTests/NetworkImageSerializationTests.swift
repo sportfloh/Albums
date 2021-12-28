@@ -82,3 +82,35 @@ extension NetworkImageSerializationTestCase {
         }
     }
 }
+
+extension NetworkImageSerializationTestCase {
+    func testImageError() {
+        ImageSourceTestDouble.imageSourceReturnImageSource = NSObject()
+
+        ImageSourceTestDouble.imageReturnImage = nil
+
+        XCTAssertThrowsError(
+            try NetworkImageSerializationTestDouble.image(with: DataTestDouble())
+        ) { error in
+            XCTAssertEqual(
+                ImageSourceTestDouble.imageSourceParameterData as Data?,
+                DataTestDouble()
+            )
+            XCTAssertNil(ImageSourceTestDouble.imageSourceParameterOptions)
+
+            XCTAssertIdentical(
+                ImageSourceTestDouble.imageParameterImageSource,
+                ImageSourceTestDouble.imageSourceReturnImageSource
+            )
+            XCTAssertEqual(
+                ImageSourceTestDouble.imageParameterIndex, 0
+            )
+            XCTAssertNil(ImageSourceTestDouble.imageSourceParameterOptions)
+
+            if let error = try? XCTUnwrap(error as? NetworkImageSerializationTestDouble.Error) {
+                XCTAssertEqual(error.code, .imageError)
+                XCTAssertNil(error.underlying)
+            }
+        }
+    }
+}

@@ -25,6 +25,7 @@ extension NetworkImageSerialization {
     struct Error: Swift.Error {
         enum Code {
             case imageSourceError
+            case imageError
         }
 
         let code: Self.Code
@@ -39,9 +40,14 @@ extension NetworkImageSerialization {
 
 extension NetworkImageSerialization {
     static func image(with data: Data) throws -> ImageSource.Image {
-        let imageSource = ImageSource.createImageSource(
+        guard let imageSource = ImageSource.createImageSource(
             with: data as CFData,
             options: nil)
-        throw Self.Error(.imageSourceError)
+        else {
+            throw Self.Error(.imageSourceError)
+        }
+        let image = ImageSource.createImage(
+            with: imageSource, at: 0, options: nil)
+        throw Self.Error(.imageError)
     }
 }

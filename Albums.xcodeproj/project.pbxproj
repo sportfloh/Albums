@@ -23,6 +23,7 @@
 		DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
 		DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
 		DFDE2430277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
+		DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		DFDE242A277A21E400723867 /* NetworkImageSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkImageSource.h; sourceTree = "<group>"; };
 		DFDE242B277A21E400723867 /* NetworkImageSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkImageSource.m; sourceTree = "<group>"; };
 		DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageSerialization.swift; sourceTree = "<group>"; };
+		DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageSerializationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				DF87D3C02774E9EF009D7393 /* NetworkDataHandlerTests.swift */,
 				DF87D3C42775FF95009D7393 /* NetworkJSONHandlerTests.swift */,
 				DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */,
+				DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */,
 			);
 			path = AlbumsTests;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */,
 				DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */,
 				DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */,
 				DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */,

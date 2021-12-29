@@ -5,6 +5,8 @@
 //  Created by Florian Bruder on 29.12.21.
 //
 
+// swiftlint:disable line_length
+
 @testable import Albums
 import XCTest
 

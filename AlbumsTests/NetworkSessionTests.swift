@@ -5,6 +5,7 @@
 //  Created by Florian Bruder on 04.01.22.
 //
 
+@testable import Albums
 import XCTest
 
 // MARK: -

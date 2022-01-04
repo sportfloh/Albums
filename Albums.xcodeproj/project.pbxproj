@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF470AD7277C6DA7005A3E10 /* NetworkDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C22774EA91009D7393 /* NetworkDataHandler.swift */; };
 		DF470AD9277C7580005A3E10 /* NetworkImageHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AD8277C7580005A3E10 /* NetworkImageHandlerTests.swift */; };
 		DF470ADE2784DC08005A3E10 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470ADD2784DC08005A3E10 /* NetworkSession.swift */; };
-		DF470ADF2784DC08005A3E10 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470ADD2784DC08005A3E10 /* NetworkSession.swift */; };
 		DF470AE12784DC85005A3E10 /* NetworkSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AE02784DC85005A3E10 /* NetworkSessionTests.swift */; };
 		DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3942774E817009D7393 /* AlbumsApp.swift */; };
 		DF87D3972774E817009D7393 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3962774E817009D7393 /* ContentView.swift */; };
@@ -25,12 +23,9 @@
 		DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C62775FFCD009D7393 /* NetworkJSONHandler.swift */; };
 		DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */; };
 		DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
-		DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
 		DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
-		DFDE2430277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
 		DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */; };
 		DFDE2438277C683300723867 /* NetworkImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2437277C683300723867 /* NetworkImageHandler.swift */; };
-		DFDE2439277C683300723867 /* NetworkImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2437277C683300723867 /* NetworkImageHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,18 +344,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF470AD7277C6DA7005A3E10 /* NetworkDataHandler.swift in Sources */,
 				DF470AE12784DC85005A3E10 /* NetworkSessionTests.swift in Sources */,
 				DF470AD9277C7580005A3E10 /* NetworkImageHandlerTests.swift in Sources */,
 				DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */,
-				DF470ADF2784DC08005A3E10 /* NetworkSession.swift in Sources */,
 				DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */,
 				DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */,
-				DFDE242D277A21E400723867 /* NetworkImageSource.m in Sources */,
-				DFDE2430277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */,
 				DF87D3C12774E9EF009D7393 /* NetworkDataHandlerTests.swift in Sources */,
 				DF87D3C52775FF95009D7393 /* NetworkJSONHandlerTests.swift in Sources */,
-				DFDE2439277C683300723867 /* NetworkImageHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

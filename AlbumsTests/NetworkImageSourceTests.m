@@ -6,7 +6,6 @@
 //
 
 #import <XCTest/XCTest.h>
-
 #import "NetworkImageSource.h"
 
 static CGImageSourceRef _Nullable NetworkImageSourceTestDoubleCreateImageSource(CFDataRef _Nonnull, CFDictionaryRef _Nullable) CF_RETURNS_RETAINED;

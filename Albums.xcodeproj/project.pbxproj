@@ -136,9 +136,9 @@
 				DFDE2437277C683300723867 /* NetworkImageHandler.swift */,
 				DF470ADD2784DC08005A3E10 /* NetworkSession.swift */,
 				DF470AE22785A45C005A3E10 /* NetworkJSONOperation.swift */,
+				DF470AE62785BD42005A3E10 /* NetworkImageOperation.swift */,
 				DF87D3BF2774E8E0009D7393 /* UI */,
 				DF87D39A2774E818009D7393 /* Preview Content */,
-				DF470AE62785BD42005A3E10 /* NetworkImageOperation.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";

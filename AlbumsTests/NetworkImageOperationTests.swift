@@ -125,3 +125,33 @@ extension NetworkImageOperationTestCase {
         }
     }
 }
+
+// MARK: -
+
+extension NetworkImageOperationTestCase {
+    func testSucess() async {
+        SessionTestDouble.returnData = DataTestDouble()
+        SessionTestDouble.returnResponse = HTTPURLResponseTestDouble()
+
+        ImageHandlerTestDouble.returnImage = NSObject()
+
+        do {
+            let image = try await NetworkImageOperationTestDouble.image(for: URLRequestTestData())
+
+            XCTAssertEqual(
+                SessionTestDouble.parameterRequest,
+                URLRequestTestData())
+
+            XCTAssertEqual(
+                ImageHandlerTestDouble.parameterData,
+                SessionTestDouble.returnData)
+            XCTAssertIdentical(
+                ImageHandlerTestDouble.parameterResponse,
+                SessionTestDouble.returnResponse)
+
+            XCTAssertIdentical(image, ImageHandlerTestDouble.returnImage)
+        } catch {
+            XCTFail("testSuccess failed")
+        }
+    }
+}

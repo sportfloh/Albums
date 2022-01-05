@@ -51,8 +51,10 @@ struct NetworkImageOperation<
     }
 }
 
+// MARK: -
+
 extension NetworkImageOperation {
-    static func image(for request: URLRequest) async throws {
+    static func image(for request: URLRequest) async throws -> ImageHandler.Image {
         let (data, response) = try await { () -> (Data, URLResponse) in
             do {
                 return try await Session.data(for: request)
@@ -62,7 +64,7 @@ extension NetworkImageOperation {
         }()
 
         do {
-            try ImageHandler.image(with: data, response: response)
+            return try ImageHandler.image(with: data, response: response)
         } catch {
             throw Self.Error(.imageHandlerError, underlying: error)
         }

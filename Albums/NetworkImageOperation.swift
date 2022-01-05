@@ -5,6 +5,8 @@
 //  Created by Florian Bruder on 05.01.22.
 //
 
+// swiftlint:disable nesting
+
 import Foundation
 
 // MARK: -
@@ -32,8 +34,37 @@ extension NetworkImageHandler: NetworkImageOperationImageHandler where
 struct NetworkImageOperation<
     Session: NetworkImageOperationSession,
     ImageHandler: NetworkImageOperationImageHandler
-> {}
+> {
+    struct Error: Swift.Error {
+        enum Code {
+            case sessionError
+            case imageHandlerError
+        }
+
+        let code: Self.Code
+        let underlying: Swift.Error?
+
+        init(_ code: Self.Code, underlying: Swift.Error? = nil) {
+            self.code = code
+            self.underlying = underlying
+        }
+    }
+}
 
 extension NetworkImageOperation {
-    static func image(for request: URLRequest) async throws {}
+    static func image(for request: URLRequest) async throws {
+        let (data, response) = try await { () -> (Data, URLResponse) in
+            do {
+                return try await Session.data(for: request)
+            } catch {
+                throw Self.Error(.sessionError, underlying: error)
+            }
+        }()
+
+        do {
+            try ImageHandler.image(with: data, response: response)
+        } catch {
+            throw Self.Error(.imageHandlerError, underlying: error)
+        }
+    }
 }

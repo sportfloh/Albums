@@ -61,3 +61,67 @@ extension NetworkImageOperationTestCase {
         }
     }
 }
+
+// MARK: -
+
+extension NetworkImageOperationTestCase {
+    func testSessionError() async {
+        SessionTestDouble.returnData = nil
+        SessionTestDouble.returnResponse = nil
+
+        ImageHandlerTestDouble.returnImage = nil
+
+        do {
+            _ = try await NetworkImageOperationTestDouble.image(for: URLRequestTestData())
+            XCTFail("testSessionError failed")
+        } catch {
+            XCTAssertEqual(
+                SessionTestDouble.parameterRequest,
+                URLRequestTestData())
+
+            XCTAssertNil(ImageHandlerTestDouble.parameterData)
+            XCTAssertNil(ImageHandlerTestDouble.parameterResponse)
+
+            if let error = try? XCTUnwrap(error as? NetworkImageOperationTestDouble.Error) {
+                XCTAssertEqual(error.code, .sessionError)
+                if let underlying = try? XCTUnwrap(error.underlying as NSError?) {
+                    XCTAssertIdentical(underlying, SessionTestDouble.returnError)
+                }
+            }
+        }
+    }
+}
+
+// MARK: -
+
+extension NetworkImageOperationTestCase {
+    func testImageHandlerError() async {
+        SessionTestDouble.returnData = DataTestDouble()
+        SessionTestDouble.returnResponse = HTTPURLResponseTestDouble()
+
+        ImageHandlerTestDouble.returnImage = nil
+
+        do {
+            _ = try await NetworkImageOperationTestDouble.image(for: URLRequestTestData())
+            XCTFail("testImageHandlerError failed")
+        } catch {
+            XCTAssertEqual(
+                SessionTestDouble.parameterRequest,
+                URLRequestTestData())
+
+            XCTAssertEqual(
+                ImageHandlerTestDouble.parameterData,
+                SessionTestDouble.returnData)
+            XCTAssertIdentical(
+                ImageHandlerTestDouble.parameterResponse,
+                SessionTestDouble.returnResponse)
+
+            if let error = try? XCTUnwrap(error as? NetworkImageOperationTestDouble.Error) {
+                XCTAssertEqual(error.code, .imageHandlerError)
+                if let underlying = try? XCTUnwrap(error.underlying as NSError?) {
+                    XCTAssertIdentical(underlying, ImageHandlerTestDouble.returnError)
+                }
+            }
+        }
+    }
+}

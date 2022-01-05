@@ -25,7 +25,15 @@ protocol NetworkImageOperationImageHandler {
 
 extension NetworkImageHandler: NetworkImageOperationImageHandler where
     DataHandler == NetworkDataHandler,
-    ImageSerialization == NetworkImageSerialization<NetworkImageSource>
-{}
+    ImageSerialization == NetworkImageSerialization<NetworkImageSource> {}
 
 // MARK: -
+
+struct NetworkImageOperation<
+    Session: NetworkImageOperationSession,
+    ImageHandler: NetworkImageOperationImageHandler
+> {}
+
+extension NetworkImageOperation {
+    static func image(for request: URLRequest) async throws {}
+}

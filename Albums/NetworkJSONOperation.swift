@@ -28,10 +28,37 @@ protocol NetworkJSONOperationJSONHandler {
 struct NetworkJSONOperation<
     Session: NetworkJSONOperationSession,
     JSONHandler: NetworkJSONOperationJSONHandler
-> {}
+> {
+    struct Error: Swift.Error {
+        enum Code {
+            case sessionError
+            case jsonHandlerError
+        }
 
-extension NetworkJSONOperationSession {
-    static func json(for request: URLRequest) async throws {
-        
+        let code: Self.Code?
+        let underlying: Swift.Error?
+
+        init(_ code: Self.Code, underlying: Swift.Error? = nil) {
+            self.code = code
+            self.underlying = underlying
+        }
+    }
+}
+
+extension NetworkJSONOperation {
+    static func json(for request: URLRequest) async throws -> JSONHandler.JSON {
+        let (data, response) = try await { () -> (Data, URLResponse) in
+            do {
+                return try await Session.data(for: request)
+            } catch {
+                throw Self.Error(.sessionError, underlying: error)
+            }
+        }()
+
+        do {
+            return try JSONHandler.json(with: data, response: response)
+        } catch {
+            throw Self.Error(.jsonHandlerError, underlying: error)
+        }
     }
 }

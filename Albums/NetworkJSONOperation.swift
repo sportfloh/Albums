@@ -24,3 +24,14 @@ protocol NetworkJSONOperationJSONHandler {
 }
 
 // MARK: -
+
+struct NetworkJSONOperation<
+    Session: NetworkJSONOperationSession,
+    JSONHandler: NetworkJSONOperationJSONHandler
+> {}
+
+extension NetworkJSONOperationSession {
+    static func json(for request: URLRequest) async throws {
+        
+    }
+}

@@ -10,6 +10,7 @@
 		DF470AD9277C7580005A3E10 /* NetworkImageHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AD8277C7580005A3E10 /* NetworkImageHandlerTests.swift */; };
 		DF470ADE2784DC08005A3E10 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470ADD2784DC08005A3E10 /* NetworkSession.swift */; };
 		DF470AE12784DC85005A3E10 /* NetworkSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AE02784DC85005A3E10 /* NetworkSessionTests.swift */; };
+		DF470AE32785A45C005A3E10 /* NetworkJSONOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AE22785A45C005A3E10 /* NetworkJSONOperation.swift */; };
 		DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3942774E817009D7393 /* AlbumsApp.swift */; };
 		DF87D3972774E817009D7393 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3962774E817009D7393 /* ContentView.swift */; };
 		DF87D3992774E818009D7393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF87D3982774E818009D7393 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		DF470AD8277C7580005A3E10 /* NetworkImageHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageHandlerTests.swift; sourceTree = "<group>"; };
 		DF470ADD2784DC08005A3E10 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		DF470AE02784DC85005A3E10 /* NetworkSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionTests.swift; sourceTree = "<group>"; };
+		DF470AE22785A45C005A3E10 /* NetworkJSONOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONOperation.swift; sourceTree = "<group>"; };
 		DF87D3912774E817009D7393 /* Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF87D3942774E817009D7393 /* AlbumsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsApp.swift; sourceTree = "<group>"; };
 		DF87D3962774E817009D7393 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */,
 				DFDE2437277C683300723867 /* NetworkImageHandler.swift */,
 				DF470ADD2784DC08005A3E10 /* NetworkSession.swift */,
+				DF470AE22785A45C005A3E10 /* NetworkJSONOperation.swift */,
 				DF87D3BF2774E8E0009D7393 /* UI */,
 				DF87D39A2774E818009D7393 /* Preview Content */,
 			);
@@ -333,6 +336,7 @@
 				DFDE2438277C683300723867 /* NetworkImageHandler.swift in Sources */,
 				DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */,
 				DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */,
+				DF470AE32785A45C005A3E10 /* NetworkJSONOperation.swift in Sources */,
 				DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */,
 				DF470ADE2784DC08005A3E10 /* NetworkSession.swift in Sources */,
 				DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */,

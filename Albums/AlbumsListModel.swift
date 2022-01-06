@@ -28,3 +28,13 @@ struct Album {
 
 extension Album: Hashable {}
 extension Album: Identifiable {}
+
+// MARK: -
+
+@MainActor final class AlbumsListModel<JSONOperation: AlbumsListModelJSONOperation>: ObservableObject {
+    @Published private(set) var albums = [Album]()
+}
+
+extension AlbumsListModel {
+    func requestAlbums() async throws {}
+}

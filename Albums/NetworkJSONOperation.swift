@@ -5,7 +5,7 @@
 //  Created by Florian Bruder on 05.01.22.
 //
 
-// swiftlint:disable nesting
+// swiftlint:disable nesting line_length
 
 import Foundation
 
@@ -24,6 +24,8 @@ protocol NetworkJSONOperationJSONHandler {
 
     static func json(with: Data, response: URLResponse) throws -> JSON
 }
+
+extension NetworkJSONHandler: NetworkJSONOperationJSONHandler where DataHandler == NetworkDataHandler, JSONSerialization == Foundation.JSONSerialization {}
 
 // MARK: -
 

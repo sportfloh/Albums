@@ -46,26 +46,18 @@ extension AlbumsListModelTestCase {
         URLRequest(url: URL(string: "https://itunes.apple.com/us/rss/topalbums/limit=100/json")!)
     }
 
-    @MainActor func testError() async {
-        JSONOperationTestDouble.returnJSON = nil
+    private static var json: Any {
+        let bundle = Bundle(identifier: "de.sportfloh.AlbumsTests")!
+        let url = bundle.url(forResource: "Albums", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        let json = try! JSONSerialization.jsonObject(with: data, options: [])
+        return json
+    }
 
-        let model = AlbumsListModelTestDouble()
-        do {
-            try await model.requestAlbums()
-            XCTFail("testError failed")
-        } catch {
-            XCTAssertEqual(JSONOperationTestDouble.parameterRequest, Self.request)
-
-            XCTAssertEqual(model.albums, [])
-
-            if let error = try? XCTUnwrap(error as NSError?) {
-                XCTAssertIdentical(error, JSONOperationTestDouble.returnError)
-            }
-        }
+    private static var albums: [Album] {
+        Albums(self.json)
     }
 }
-
-// MARK: -
 
 private func Albums(_ json: Any) -> [Album] {
     var albums = [Album]()
@@ -92,18 +84,28 @@ private func Albums(_ json: Any) -> [Album] {
 // MARK: -
 
 extension AlbumsListModelTestCase {
-    private static var json: Any {
-        let bundle = Bundle(identifier: "de.sportfloh.AlbumsTests")!
-        let url = bundle.url(forResource: "Albums", withExtension: "json")!
-        let data = try! Data(contentsOf: url)
-        let json = try! JSONSerialization.jsonObject(with: data, options: [])
-        return json
-    }
+    @MainActor func testError() async {
+        JSONOperationTestDouble.returnJSON = nil
 
-    private static var albums: [Album] {
-        Albums(self.json)
-    }
+        let model = AlbumsListModelTestDouble()
+        do {
+            try await model.requestAlbums()
+            XCTFail("testError failed")
+        } catch {
+            XCTAssertEqual(JSONOperationTestDouble.parameterRequest, Self.request)
 
+            XCTAssertEqual(model.albums, [])
+
+            if let error = try? XCTUnwrap(error as NSError?) {
+                XCTAssertIdentical(error, JSONOperationTestDouble.returnError)
+            }
+        }
+    }
+}
+
+// MARK: -
+
+extension AlbumsListModelTestCase {
     @MainActor func testSuccess() async {
         JSONOperationTestDouble.returnJSON = Self.json
 

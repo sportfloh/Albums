@@ -5,6 +5,8 @@
 //  Created by Florian Bruder on 06.01.22.
 //
 
+// swiftlint:disable line_length
+
 import Foundation
 
 // MARK: -
@@ -36,5 +38,10 @@ extension Album: Identifiable {}
 }
 
 extension AlbumsListModel {
-    func requestAlbums() async throws {}
+    func requestAlbums() async throws {
+        if let url = URL(string: "https://itunes.apple.com/us/rss/topalbums/limit=100/json") {
+            let request = URLRequest(url: url)
+            try await JSONOperation.json(for: request)
+        }
+    }
 }

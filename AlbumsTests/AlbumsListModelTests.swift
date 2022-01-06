@@ -10,7 +10,7 @@ import XCTest
 
 // MARK: -
 
-final class AlbumsListModelTestCase: XCTest {
+final class AlbumsListModelTestCase: XCTestCase {
     override func tearDown() {
         JSONOperationTestDouble.parameterRequest = nil
         JSONOperationTestDouble.returnJSON = nil
@@ -33,6 +33,32 @@ extension AlbumsListModelTestCase {
                 throw self.returnError
             }
             return returnJSON
+        }
+    }
+}
+
+// MARK: -
+
+extension AlbumsListModelTestCase {
+    private static var request: URLRequest {
+        URLRequest(url: URL(string: "https://itunes.apple.com/us/rss/topalbums/limit=100/json")!)
+    }
+
+    @MainActor func testError() async {
+        JSONOperationTestDouble.returnJSON = nil
+
+        let model = AlbumsListModelTestDouble()
+        do {
+            try await model.requestAlbums()
+            XCTFail("testError failed")
+        } catch {
+            XCTAssertEqual(JSONOperationTestDouble.parameterRequest, Self.request)
+
+            XCTAssertEqual(model.albums, [])
+
+            if let error = try? XCTUnwrap(error as NSError?) {
+                XCTAssertIdentical(error, JSONOperationTestDouble.returnError)
+            }
         }
     }
 }

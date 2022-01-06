@@ -16,3 +16,15 @@ protocol AlbumsListModelJSONOperation {
 }
 
 extension NetworkJSONOperation: AlbumsListModelJSONOperation where Session == NetworkSession<Foundation.URLSession>, JSONHandler == NetworkJSONHandler<NetworkDataHandler, Foundation.JSONSerialization> {}
+
+// MARK: -
+
+struct Album {
+    let id: String
+    let artist: String
+    let name: String
+    let image: String
+}
+
+extension Album: Hashable {}
+extension Album: Identifiable {}

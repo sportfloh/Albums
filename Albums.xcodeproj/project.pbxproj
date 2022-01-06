@@ -32,6 +32,7 @@
 		DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
 		DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */; };
 		DFDE2438277C683300723867 /* NetworkImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2437277C683300723867 /* NetworkImageHandler.swift */; };
+		DFDFB4FC278717DB00164F22 /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = DFDFB4FB278717DB00164F22 /* Albums.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageSerialization.swift; sourceTree = "<group>"; };
 		DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageSerializationTests.swift; sourceTree = "<group>"; };
 		DFDE2437277C683300723867 /* NetworkImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageHandler.swift; sourceTree = "<group>"; };
+		DFDFB4FB278717DB00164F22 /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				DF470AE42785A77A005A3E10 /* NetworkJSONOperationTests.swift */,
 				DF470AE82785C134005A3E10 /* NetworkImageOperationTests.swift */,
 				DF470AEC2786F7EC005A3E10 /* AlbumsListModelTests.swift */,
+				DFDFB4FB278717DB00164F22 /* Albums.json */,
 			);
 			path = AlbumsTests;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDFB4FC278717DB00164F22 /* Albums.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

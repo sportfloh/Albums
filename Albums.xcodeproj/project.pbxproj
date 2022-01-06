@@ -15,6 +15,7 @@
 		DF470AE72785BD42005A3E10 /* NetworkImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AE62785BD42005A3E10 /* NetworkImageOperation.swift */; };
 		DF470AE92785C134005A3E10 /* NetworkImageOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AE82785C134005A3E10 /* NetworkImageOperationTests.swift */; };
 		DF470AEB2786ED25005A3E10 /* AlbumsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AEA2786ED25005A3E10 /* AlbumsListModel.swift */; };
+		DF470AED2786F7EC005A3E10 /* AlbumsListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF470AEC2786F7EC005A3E10 /* AlbumsListModelTests.swift */; };
 		DF87D3952774E817009D7393 /* AlbumsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3942774E817009D7393 /* AlbumsApp.swift */; };
 		DF87D3972774E817009D7393 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3962774E817009D7393 /* ContentView.swift */; };
 		DF87D3992774E818009D7393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF87D3982774E818009D7393 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		DF470AE62785BD42005A3E10 /* NetworkImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperation.swift; sourceTree = "<group>"; };
 		DF470AE82785C134005A3E10 /* NetworkImageOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperationTests.swift; sourceTree = "<group>"; };
 		DF470AEA2786ED25005A3E10 /* AlbumsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListModel.swift; sourceTree = "<group>"; };
+		DF470AEC2786F7EC005A3E10 /* AlbumsListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListModelTests.swift; sourceTree = "<group>"; };
 		DF87D3912774E817009D7393 /* Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF87D3942774E817009D7393 /* AlbumsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsApp.swift; sourceTree = "<group>"; };
 		DF87D3962774E817009D7393 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				DF470AE02784DC85005A3E10 /* NetworkSessionTests.swift */,
 				DF470AE42785A77A005A3E10 /* NetworkJSONOperationTests.swift */,
 				DF470AE82785C134005A3E10 /* NetworkImageOperationTests.swift */,
+				DF470AEC2786F7EC005A3E10 /* AlbumsListModelTests.swift */,
 			);
 			path = AlbumsTests;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				DF470AD9277C7580005A3E10 /* NetworkImageHandlerTests.swift in Sources */,
 				DF470AE52785A77A005A3E10 /* NetworkJSONOperationTests.swift in Sources */,
 				DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */,
+				DF470AED2786F7EC005A3E10 /* AlbumsListModelTests.swift in Sources */,
 				DF87D3A62774E818009D7393 /* AlbumsTests.swift in Sources */,
 				DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */,
 				DF87D3C12774E9EF009D7393 /* NetworkDataHandlerTests.swift in Sources */,

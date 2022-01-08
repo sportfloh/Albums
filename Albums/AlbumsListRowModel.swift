@@ -24,23 +24,32 @@ extension NetworkImageOperation: AlbumsListRowModelsImageOperation where Session
 @MainActor final class AlbumsListRowModel<ImageOperation: AlbumsListRowModelsImageOperation>: ObservableObject {
     @Published private(set) var image: ImageOperation.Image?
 
-    init(album: Album) {}
-}
+    private let album: Album
 
-// MARK: - Properties
-
-extension AlbumsListRowModel {
-    var artist: String {
-        String()
-    }
-
-    var name: String {
-        String()
+    init(album: Album) {
+        self.album = album
     }
 }
 
 // MARK: -
 
 extension AlbumsListRowModel {
-    func requestImage() async throws {}
+    var artist: String {
+        self.album.artist
+    }
+
+    var name: String {
+        self.album.name
+    }
+}
+
+// MARK: -
+
+extension AlbumsListRowModel {
+    func requestImage() async throws {
+        if let url = URL(string: self.album.image) {
+            let request = URLRequest(url: url)
+            _ = try await ImageOperation.image(for: request)
+        }
+    }
 }

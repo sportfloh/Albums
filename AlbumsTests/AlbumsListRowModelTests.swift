@@ -38,3 +38,35 @@ extension AlbumsListRowModelTestCase {
     }
 }
 
+// MARK: -
+
+extension AlbumsListRowModelTestCase {
+    private static var album: Album {
+        Album(id: "id", artist: "artist", name: "name", image: "image")
+    }
+
+    @MainActor func testError() async {
+        ImageOperationTestDouble.returnImage = nil
+
+        let model = AlbumsListRowModelTestDouble(album: Self.album)
+        XCTAssertEqual(model.artist, Self.album.artist)
+        XCTAssertEqual(model.name, Self.album.name)
+
+        do {
+            try await model.requestImage()
+            XCTFail("testError failed")
+        } catch {
+            XCTAssertEqual(
+                ImageOperationTestDouble.parameterRequest,
+                URLRequest(url: URL(string: Self.album.image)!)
+            )
+
+            XCTAssertNil(model.image)
+
+            if let error = try? XCTUnwrap(error as NSError?) {
+                XCTAssertIdentical(error, ImageOperationTestDouble.returnError)
+            }
+        }
+    }
+}
+

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+// MARK: -
+
+protocol AlbumsListRowModelsImageOperation {
+    associatedtype Image
+
+    static func image(for: URLRequest) async throws -> Image
+}
+
+extension NetworkImageOperation: AlbumsListRowModelsImageOperation where Session == NetworkSession<Foundation.URLSession>, ImageHandler == NetworkImageHandler<NetworkDataHandler, NetworkImageSerialization<NetworkImageSource>> {}

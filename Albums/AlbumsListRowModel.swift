@@ -16,3 +16,29 @@ protocol AlbumsListRowModelsImageOperation {
 }
 
 extension NetworkImageOperation: AlbumsListRowModelsImageOperation where Session == NetworkSession<Foundation.URLSession>, ImageHandler == NetworkImageHandler<NetworkDataHandler, NetworkImageSerialization<NetworkImageSource>> {}
+
+// MARK: -
+
+@MainActor final class AlbumsListRowModel<ImageOperation: AlbumsListRowModelsImageOperation>: ObservableObject {
+    @Published private(set) var image: ImageOperation.Image?
+
+    init(album: Album) {}
+}
+
+// MARK: - Properties
+
+extension AlbumsListRowModel {
+    var artist: String {
+        String()
+    }
+
+    var name: String {
+        String()
+    }
+}
+
+// MARK: -
+
+extension AlbumsListRowModel {
+    func requestImage() async throws {}
+}

@@ -49,7 +49,8 @@ extension AlbumsListRowModel {
     func requestImage() async throws {
         if let url = URL(string: self.album.image) {
             let request = URLRequest(url: url)
-            _ = try await ImageOperation.image(for: request)
+            let image = try await ImageOperation.image(for: request)
+            self.image = image
         }
     }
 }

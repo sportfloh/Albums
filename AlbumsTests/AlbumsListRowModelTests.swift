@@ -70,3 +70,45 @@ extension AlbumsListRowModelTestCase {
     }
 }
 
+// MARK: -
+
+extension AlbumsListRowModelTestCase {
+    @MainActor func testSuccess() async {
+        ImageOperationTestDouble.returnImage = NSObject()
+
+        let model = AlbumsListRowModelTestDouble(album: Self.album)
+
+        var modelDidChange = false
+        let modelWillChange = model.objectWillChange.sink { _ in
+            modelDidChange = true
+        }
+
+        var imageDidChange = false
+        let imageWillChange = model.$image.sink { _ in
+            if modelDidChange {
+                imageDidChange = true
+            }
+        }
+
+        XCTAssertEqual(model.artist, Self.album.artist)
+        XCTAssertEqual(model.name, Self.album.name)
+
+        do {
+            try await model.requestImage()
+
+            XCTAssertTrue(imageDidChange)
+
+            XCTAssertEqual(
+                ImageOperationTestDouble.parameterRequest,
+                URLRequest(url: URL(string: Self.album.image)!)
+            )
+
+            XCTAssertIdentical(model.image, ImageOperationTestDouble.returnImage)
+        } catch {
+            XCTFail("testSuccess failed")
+        }
+
+        modelWillChange.cancel()
+        imageWillChange.cancel()
+    }
+}

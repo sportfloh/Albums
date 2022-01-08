@@ -28,6 +28,7 @@
 		DF87D3C52775FF95009D7393 /* NetworkJSONHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C42775FF95009D7393 /* NetworkJSONHandlerTests.swift */; };
 		DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF87D3C62775FFCD009D7393 /* NetworkJSONHandler.swift */; };
 		DFB07F5D2789BEAC0033876D /* AlbumsListRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB07F5C2789BEAC0033876D /* AlbumsListRowModel.swift */; };
+		DFB07F5F2789C2700033876D /* AlbumsListRowModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB07F5E2789C2700033876D /* AlbumsListRowModelTests.swift */; };
 		DFDE2428277A1EBE00723867 /* NetworkImageSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */; };
 		DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242B277A21E400723867 /* NetworkImageSource.m */; };
 		DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE242E277B9FDC00723867 /* NetworkImageSerialization.swift */; };
@@ -78,6 +79,7 @@
 		DF87D3C42775FF95009D7393 /* NetworkJSONHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONHandlerTests.swift; sourceTree = "<group>"; };
 		DF87D3C62775FFCD009D7393 /* NetworkJSONHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONHandler.swift; sourceTree = "<group>"; };
 		DFB07F5C2789BEAC0033876D /* AlbumsListRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListRowModel.swift; sourceTree = "<group>"; };
+		DFB07F5E2789C2700033876D /* AlbumsListRowModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListRowModelTests.swift; sourceTree = "<group>"; };
 		DFDE2427277A1EBE00723867 /* NetworkImageSourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkImageSourceTests.m; sourceTree = "<group>"; };
 		DFDE2429277A21E300723867 /* Albums-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Albums-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFDE242A277A21E400723867 /* NetworkImageSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkImageSource.h; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				DF470AE82785C134005A3E10 /* NetworkImageOperationTests.swift */,
 				DF470AEC2786F7EC005A3E10 /* AlbumsListModelTests.swift */,
 				DFDFB4FB278717DB00164F22 /* Albums.json */,
+				DFB07F5E2789C2700033876D /* AlbumsListRowModelTests.swift */,
 			);
 			path = AlbumsTests;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB07F5F2789C2700033876D /* AlbumsListRowModelTests.swift in Sources */,
 				DF470AE12784DC85005A3E10 /* NetworkSessionTests.swift in Sources */,
 				DF470AE92785C134005A3E10 /* NetworkImageOperationTests.swift in Sources */,
 				DF470AD9277C7580005A3E10 /* NetworkImageHandlerTests.swift in Sources */,

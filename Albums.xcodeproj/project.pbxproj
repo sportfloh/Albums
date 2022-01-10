@@ -36,6 +36,7 @@
 		DFDE2436277BA4CA00723867 /* NetworkImageSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */; };
 		DFDE2438277C683300723867 /* NetworkImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE2437277C683300723867 /* NetworkImageHandler.swift */; };
 		DFDFB4FC278717DB00164F22 /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = DFDFB4FB278717DB00164F22 /* Albums.json */; };
+		DFF427D4278C490400D580E0 /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF427D3278C490400D580E0 /* AlbumsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		DFDE2435277BA4CA00723867 /* NetworkImageSerializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageSerializationTests.swift; sourceTree = "<group>"; };
 		DFDE2437277C683300723867 /* NetworkImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageHandler.swift; sourceTree = "<group>"; };
 		DFDFB4FB278717DB00164F22 /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
+		DFF427D3278C490400D580E0 /* AlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				DF87D3982774E818009D7393 /* Assets.xcassets */,
 				DF87D3962774E817009D7393 /* ContentView.swift */,
 				DFB07F60278A28C20033876D /* AlbumsListRowView.swift */,
+				DFF427D3278C490400D580E0 /* AlbumsListView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				DFDE2438277C683300723867 /* NetworkImageHandler.swift in Sources */,
 				DF87D3C72775FFCD009D7393 /* NetworkJSONHandler.swift in Sources */,
 				DFDE242C277A21E400723867 /* NetworkImageSource.m in Sources */,
+				DFF427D4278C490400D580E0 /* AlbumsListView.swift in Sources */,
 				DF470AE32785A45C005A3E10 /* NetworkJSONOperation.swift in Sources */,
 				DFDE242F277B9FDC00723867 /* NetworkImageSerialization.swift in Sources */,
 				DFB07F61278A28C20033876D /* AlbumsListRowView.swift in Sources */,

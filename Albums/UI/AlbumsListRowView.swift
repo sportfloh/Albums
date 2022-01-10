@@ -31,7 +31,7 @@ struct AlbumsListRowView<ListRowViewModel: AlbumsListRowViewModel>: View {
     var body: some View {
         HStack {
             if let cgImage = self.model.image {
-                Image(decorative: cgImage, scale: 0, orientation: .up)
+                Image(decorative: cgImage, scale: 1.0, orientation: .up)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 128, height: 128, alignment: .topLeading)

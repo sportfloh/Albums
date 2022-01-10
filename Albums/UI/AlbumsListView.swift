@@ -31,9 +31,9 @@ struct AlbumsListView<ListViewModel: AlbumsListViewModel, ListRowViewModel: Albu
             AlbumsListRowView<ListRowViewModel>(
                 model: ListRowViewModel(album: album)
             )
-        }.listStyle(
-            .plain
-        ).task {
+        }
+        .listStyle(.plain)
+        .task {
             do {
                 try await self.model.requestAlbums()
             } catch {

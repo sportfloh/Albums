@@ -36,15 +36,18 @@ struct AlbumsListRowView<ListRowViewModel: AlbumsListRowViewModel>: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 128, height: 128, alignment: .topLeading)
             }
+
             VStack(alignment: .leading, spacing: 3) {
                 Text(self.model.artist)
                     .foregroundColor(.primary)
                     .font(.headline)
+
                 Text(self.model.name)
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             }
-        }.task {
+        }
+        .task {
             do {
                 try await self.model.requestImage()
             } catch {
@@ -125,8 +128,7 @@ struct AlbumsListRowView_Previews: PreviewProvider {
             AlbumsListRowView<ListRowModel>(
                 model: ListRowModel(album: album)
             )
-        }.listStyle(
-            .plain
-        )
+        }
+        .listStyle(.plain)
     }
 }

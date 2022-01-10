@@ -9,6 +9,8 @@
 
 import SwiftUI
 
+// MARK: -
+
 @main
 struct AlbumsApp: App {
     private typealias JSONHandler = NetworkJSONHandler<NetworkDataHandler, JSONSerialization>

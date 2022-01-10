@@ -65,6 +65,7 @@ extension NetworkJSONOperationTestCase {
     }
 }
 
+// MARK: -
 extension NetworkJSONOperationTestCase {
     func testSessionError() async {
         SessionTestDouble.returnData = nil
@@ -93,6 +94,7 @@ extension NetworkJSONOperationTestCase {
     }
 }
 
+// MARK: -
 extension NetworkJSONOperationTestCase {
     func testJSONHandlerError() async {
         SessionTestDouble.returnData = DataTestDouble()
@@ -125,6 +127,7 @@ extension NetworkJSONOperationTestCase {
     }
 }
 
+// MARK: -
 extension NetworkJSONOperationTestCase {
     func testSuccess() async {
         SessionTestDouble.returnData = DataTestDouble()

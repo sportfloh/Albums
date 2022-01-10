@@ -31,8 +31,6 @@ extension NetworkImageOperation: AlbumsListRowModelsImageOperation where Session
     }
 }
 
-// MARK: -
-
 extension AlbumsListRowModel {
     var artist: String {
         self.album.artist
@@ -42,8 +40,6 @@ extension AlbumsListRowModel {
         self.album.name
     }
 }
-
-// MARK: -
 
 extension AlbumsListRowModel {
     func requestImage() async throws {

@@ -5,12 +5,14 @@
 //  Created by Florian Bruder on 23.12.21.
 //
 
+// swiftlint:disable identifier_name
+
 @testable import Albums
 import XCTest
 
-final class AlbumsTests: XCTestCase {}
+// MARK: -
 
-// swiftlint:disable identifier_name
+final class AlbumsTests: XCTestCase {}
 
 func DataTestDouble() -> Data {
     Data(UInt8.min ... UInt8.max)

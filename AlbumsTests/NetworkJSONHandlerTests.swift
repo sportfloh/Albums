@@ -8,6 +8,8 @@
 @testable import Albums
 import XCTest
 
+// MARK: -
+
 final class NetworkJSONHandlerTestCase: XCTestCase {
     private typealias NetworkJSONHandlerTestDouble = NetworkJSONHandler<
         DataHandlerTestDouble,
@@ -25,6 +27,8 @@ final class NetworkJSONHandlerTestCase: XCTestCase {
     }
 }
 
+// MARK: - Test Doubles
+
 extension NetworkJSONHandlerTestCase {
     private struct DataHandlerTestDouble: NetworkJSONHandlerDataHandler {
         static var parameterData: Data?
@@ -41,9 +45,7 @@ extension NetworkJSONHandlerTestCase {
             return returnData
         }
     }
-}
 
-extension NetworkJSONHandlerTestCase {
     private struct JSONSerializationTestDouble: NetworkJSONHandlerJSONSerialization {
         static var parameterData: Data?
         static var parameterOptions: JSONSerialization.ReadingOptions?
@@ -63,6 +65,8 @@ extension NetworkJSONHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkJSONHandlerTestCase {
     func testMimeTypeError() {
@@ -91,6 +95,8 @@ extension NetworkJSONHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkJSONHandlerTestCase {
     func testDataHandlerError() {
@@ -124,6 +130,8 @@ extension NetworkJSONHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkJSONHandlerTestCase {
     func testJSONSerializationError() {
@@ -166,6 +174,8 @@ extension NetworkJSONHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkJSONHandlerTestCase {
     func testSuccess() {

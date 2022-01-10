@@ -9,6 +9,8 @@
 
 import Foundation
 
+// MARK: -
+
 struct NetworkDataHandler {}
 
 extension NetworkDataHandler {

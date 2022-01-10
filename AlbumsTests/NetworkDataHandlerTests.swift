@@ -8,7 +8,11 @@
 @testable import Albums
 import XCTest
 
+// MARK: -
+
 final class NetworkDataHandlerTestCase: XCTestCase {}
+
+// MARK: -
 
 extension NetworkDataHandlerTestCase {
     func testError() {
@@ -25,6 +29,8 @@ extension NetworkDataHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkDataHandlerTestCase {
     private static var errorCodes = [Int](100 ... 199) + [Int](300 ... 599)
@@ -53,6 +59,8 @@ extension NetworkDataHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkDataHandlerTestCase {
     private static var successCodes = [Int](200 ... 299)

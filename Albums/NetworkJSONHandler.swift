@@ -9,11 +9,15 @@
 
 import Foundation
 
+// MARK: -
+
 protocol NetworkJSONHandlerDataHandler {
     static func data(with: Data, response: URLResponse) throws -> Data
 }
 
 extension NetworkDataHandler: NetworkJSONHandlerDataHandler {}
+
+// MARK: -
 
 protocol NetworkJSONHandlerJSONSerialization {
     associatedtype JSON
@@ -25,6 +29,8 @@ protocol NetworkJSONHandlerJSONSerialization {
 }
 
 extension JSONSerialization: NetworkJSONHandlerJSONSerialization {}
+
+// MARK: -
 
 struct NetworkJSONHandler<
     DataHandler: NetworkJSONHandlerDataHandler,

@@ -62,6 +62,8 @@ extension NetworkImageHandlerTestCase {
     }
 }
 
+// MARK: -
+
 extension NetworkImageHandlerTestCase {
     func testMimeTypeError() {
         DataHandlerTestDouble.returnData = nil
@@ -88,6 +90,8 @@ extension NetworkImageHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkImageHandlerTestCase {
     func testDatahandlerError() {
@@ -117,6 +121,8 @@ extension NetworkImageHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkImageHandlerTestCase {
     func testImageSerializationError() {
@@ -155,6 +161,8 @@ extension NetworkImageHandlerTestCase {
         }
     }
 }
+
+// MARK: -
 
 extension NetworkImageHandlerTestCase {
     func testSuccess() {

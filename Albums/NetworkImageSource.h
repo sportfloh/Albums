@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <ImageIO/ImageIO.h>
 
+//MARK: -
+
 @interface NetworkImageSource: NSObject
 
 @end

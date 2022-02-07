@@ -5,7 +5,7 @@
 //  Created by Florian Bruder on 28.12.21.
 //
 
-// swiftlint:disable identifier_name nesting
+// swiftlint:disable identifier_name
 
 import Foundation
 

@@ -5,8 +5,6 @@
 //  Created by Florian Bruder on 08.01.22.
 //
 
-// swiftlint:disable line_length
-
 import SwiftUI
 
 // MARK: -
@@ -21,7 +19,14 @@ import SwiftUI
     func requestImage() async throws
 }
 
-extension AlbumsListRowModel: AlbumsListRowViewModel where ImageOperation == NetworkImageOperation<NetworkSession<URLSession>, NetworkImageHandler<NetworkDataHandler, NetworkImageSerialization<NetworkImageSource>>> {}
+extension AlbumsListRowModel: AlbumsListRowViewModel where
+    ImageOperation == NetworkImageOperation<
+        NetworkSession<URLSession>,
+        NetworkImageHandler<
+            NetworkDataHandler,
+            NetworkImageSerialization<NetworkImageSource>
+        >
+    > {}
 
 // MARK: -
 

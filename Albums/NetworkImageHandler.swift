@@ -5,8 +5,6 @@
 //  Created by Florian Bruder on 29.12.21.
 //
 
-// swiftlint:disable nesting
-
 import Foundation
 
 // MARK: -

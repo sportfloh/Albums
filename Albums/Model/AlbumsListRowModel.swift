@@ -5,8 +5,6 @@
 //  Created by Florian Bruder on 08.01.22.
 //
 
-// swiftlint:disable line_length
-
 import Foundation
 
 // MARK: -
@@ -17,7 +15,12 @@ protocol AlbumsListRowModelsImageOperation {
     static func image(for: URLRequest) async throws -> Image
 }
 
-extension NetworkImageOperation: AlbumsListRowModelsImageOperation where Session == NetworkSession<Foundation.URLSession>, ImageHandler == NetworkImageHandler<NetworkDataHandler, NetworkImageSerialization<NetworkImageSource>> {}
+extension NetworkImageOperation: AlbumsListRowModelsImageOperation where
+    Session == NetworkSession<Foundation.URLSession>,
+    ImageHandler == NetworkImageHandler<
+        NetworkDataHandler,
+        NetworkImageSerialization<NetworkImageSource>
+    > {}
 
 // MARK: -
 

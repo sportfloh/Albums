@@ -66,7 +66,8 @@ private func Albums(_ json: Any) -> [Album] {
             if let artist = ((dictionary["im:artist"] as? [String: Any])?["label"] as? String),
                let name = ((dictionary["im:name"] as? [String: Any])?["label"] as? String),
                let image = ((dictionary["im:image"] as? [[String: Any]])?[2]["label"] as? String),
-               let id = (((dictionary["id"] as? [String: Any])?["attributes"] as? [String: Any])?["im:id"] as? String) {
+               let id = (((dictionary["id"] as? [String: Any])?["attributes"] as? [String: Any])?["im:id"] as? String)
+            {
                 let album = Album(
                     id: id,
                     artist: artist,

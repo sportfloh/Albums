@@ -5,8 +5,6 @@
 //  Created by Florian Bruder on 10.01.22.
 //
 
-// swiftlint:disable line_length
-
 import SwiftUI
 
 // MARK: -
@@ -17,7 +15,13 @@ import SwiftUI
     func requestAlbums() async throws
 }
 
-extension AlbumsListModel: AlbumsListViewModel where JSONOperation == NetworkJSONOperation<NetworkSession<Foundation.URLSession>, NetworkJSONHandler<NetworkDataHandler, Foundation.JSONSerialization>> {}
+extension AlbumsListModel: AlbumsListViewModel where
+    JSONOperation == NetworkJSONOperation<
+        NetworkSession<Foundation.URLSession>, NetworkJSONHandler<
+            NetworkDataHandler,
+            Foundation.JSONSerialization
+        >
+    > {}
 
 // MARK: -
 
